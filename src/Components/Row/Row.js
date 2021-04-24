@@ -50,13 +50,15 @@ function Row({ title, fetchUrl, isLargeRow }) {
        
       <h2>{title}</h2>
       {<Rect.Spinner animation="border" />}
+      
      
 
       <div className="row_posters">
+        
+        
         {movies.map((movie) => {
           return (
             <img
-            
               key={movie.id}
               onClick={() => handleClick(movie)}
               className={`row_poster ${isLargeRow && "row_posterlarge"}`}
@@ -64,11 +66,14 @@ function Row({ title, fetchUrl, isLargeRow }) {
                 isLargeRow ? movie.poster_path : movie.backdrop_path
               }`}
               alt={movie.name}
+          
             />
+            
           );
         })}
       </div>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+     
     </div>
   );
 }

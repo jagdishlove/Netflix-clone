@@ -4,9 +4,13 @@
     width:100%;
     background-position:no-repeat center center fixed;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height:100%;
     
 }
+
+
 
 
 
